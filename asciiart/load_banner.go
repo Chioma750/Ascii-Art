@@ -1,4 +1,4 @@
-package main
+package asciiart
 
 import (
 	"errors"
@@ -7,6 +7,9 @@ import (
 )
 
 func LoadBanner(inputfile string)([]string, error) {
+	if inputfile == ""{
+		return nil, errors.New("empty file")
+	}
 
 	data, err := os.ReadFile(inputfile)
 	if err != nil {

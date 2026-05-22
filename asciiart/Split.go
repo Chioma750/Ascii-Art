@@ -1,4 +1,4 @@
-package main
+package asciiart
 
 import "strings"
 
@@ -7,6 +7,6 @@ func Splitting (input string) []string {
 		return []string{}
 	}
 
-	lines := strings.Split(input, "\\n")
+	lines := strings.Split(input, `\n`)
 	return lines
 }

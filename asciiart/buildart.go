@@ -1,4 +1,6 @@
-package ascii
+package asciiart
+
+import "fmt"
 
 func BuildArt(str string, text []string) string {
 	validated := ValidateInput(str)
@@ -6,15 +8,15 @@ func BuildArt(str string, text []string) string {
 	txt := ""
 	for _, char := range splistr {
 		if char == "" {
-			//fmt.Println("\n")
+			fmt.Print("\n")
 			return ""
 		}
-		for i := range 8 {
+		for i := 0; i < 8; i++ {
 			for _, cha := range char {
 				stat := (int(cha)-32)*9 + 1
-				text1 := text[stat : stat+8]
-				txt = text1[i]
-				print(txt)
+				text1 := text[stat+i]
+				//txt = text1[i]
+				print(text1)
 			}
 			println()
 		}

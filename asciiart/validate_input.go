@@ -1,6 +1,7 @@
-package main
+package asciiart
 
 import (
+	"fmt"
 	"strings"
 )
 
@@ -9,12 +10,14 @@ func ValidateInput(input string) string {
 	if input == "" {
 		return ""
 	}
-	if input == "\n" {
-		return "\n"
+	if input == "\\n" {
+		fmt.Print("\n")
+		return ""
 	}
 	for _, word := range input {
 		if word < 32 || word > 126 {
-			return "invalid character"
+			fmt.Print("invalid character")
+			return ""
 		}
 	}
 	return input
