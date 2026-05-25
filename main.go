@@ -7,11 +7,12 @@ import (
 )
 
 func main() {
-	inputfile := "standard.txt"
-	inputtext := os.Args[1]
 
-	data, _ := asciiart.LoadBanner(inputfile)
+	inputtext := os.Args[1]
+	inputfile := os.Args[2]
+
+	data, _ := asciiart.LoadBanner(inputfile + ".txt")
 	result := asciiart.BuildArt(inputtext, data)
 
-	fmt.Println(result)
+	fmt.Print(result)
 }
