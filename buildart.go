@@ -1,4 +1,4 @@
-package ascii
+package main
 
 import "strings"
 
@@ -8,13 +8,15 @@ func BuildArt(str string, text []string) string {
 	var words strings.Builder
 	for _, char := range splistr {
 		if char == "" {
-			return words.String()
+			words.WriteString("\n")
+			continue
 		}
 		for i := range 8 {
 			for _, cha := range char {
 				stat := (int(cha)-32)*9 + 1
 				word := text[stat : stat+8]
 				words.WriteString(word[i])
+
 			}
 			words.WriteString("\n")
 		}
