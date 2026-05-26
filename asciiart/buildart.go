@@ -1,25 +1,25 @@
 package asciiart
 
-import "fmt"
+import "strings"
 
 func BuildArt(str string, text []string) string {
 	validated := ValidateInput(str)
 	splistr := Splitting(validated)
-	txt := ""
+	var words strings.Builder
 	for _, char := range splistr {
 		if char == "" {
-			fmt.Print("\n")
-			return ""
+			words.WriteString("\n")
+			continue
 		}
-		for i := 0; i < 8; i++ {
+		for i := range 8 {
 			for _, cha := range char {
 				stat := (int(cha)-32)*9 + 1
-				text1 := text[stat+i]
-				//txt = text1[i]
-				print(text1)
+				word := text[stat : stat+8]
+				words.WriteString(word[i])
+
 			}
-			println()
+			words.WriteString("\n")
 		}
 	}
-	return txt
+	return words.String()
 }
