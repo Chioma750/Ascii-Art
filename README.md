@@ -18,18 +18,7 @@ To add more banner styles, simply add another .txt file in the same format as th
 
 ## Project Structure
 
-ascii-art/ 
-├── asciiart/ 
-│   ├── buildart.go  
-│   ├── load_banner.go  
-│   ├── Split.go  
-│   └── validate_input.go 
-├── main.go 
-├── go.mod 
-├── standard.txt 
-├── shadow.txt 
-├── thinkertoy.txt 
-└── README.md
+![Project Structure](Project%20Structure.png)
 
 
 # Project documentation
