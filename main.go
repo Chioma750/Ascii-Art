@@ -8,7 +8,7 @@ import (
 
 func main() {
 	if len(os.Args) < 3 {
-		fmt.Println("ensure you enter: go run . Hello  standared")
+		fmt.Println(`ensure you enter: go run . "Hello" "standard"`)
 		return
 	}
 	if len(os.Args) > 3 {

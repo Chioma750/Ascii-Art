@@ -6,9 +6,11 @@ import (
 	"strings"
 )
 
+//function to read the inputs from banner file 
+// Takes inputfile as string and returns the data as slice of strings
 func LoadBanner(inputfile string)([]string, error) {
 	if inputfile == ""{
-		return nil, errors.New("empty file")
+		return nil, errors.New("nil file")
 	}
 
 	data, err := os.ReadFile(inputfile)
