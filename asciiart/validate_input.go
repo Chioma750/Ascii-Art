@@ -14,7 +14,7 @@ func ValidateInput(input string) string {
 	}
 	if input == "\\n" {
 		fmt.Print("\n")
-		return "\n"
+		return ""
 	}
 	for _, word := range input {
 		if word < 32 || word > 126 {
