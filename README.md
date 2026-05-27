@@ -18,8 +18,7 @@ To add more banner styles, simply add another .txt file in the same format as th
 
 ## Project Structure
 
-![Project Structure](Project%20Structure.png)
-
+![Project Structure](Project-Structure.png)
 
 # Project documentation
 
